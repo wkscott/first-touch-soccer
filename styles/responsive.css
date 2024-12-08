@@ -1,0 +1,78 @@
+/* Mobile first approach */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hide-mobile {
+        display: none;
+    }
+
+    /* Navigation adjustments */
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        height: 100vh;
+        width: 250px;
+        background: white;
+        padding: 20px;
+        transition: right 0.3s ease;
+    }
+
+    .nav-menu.active {
+        right: 0;
+    }
+
+    /* Form adjustments */
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    input, select, textarea {
+        width: 100%;
+        padding: 12px;
+    }
+
+    /* Button adjustments */
+    button {
+        width: 100%;
+        padding: 12px;
+    }
+
+    /* Card adjustments */
+    .card {
+        margin: 10px 0;
+    }
+
+    /* Table adjustments */
+    .table-responsive {
+        overflow-x: auto;
+    }
+}
+
+/* Tablet */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Desktop */
+@media (min-width: 1025px) {
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+}
+
+/* Print styles */
+@media print {
+    .no-print {
+        display: none;
+    }
+} 

@@ -1,0 +1,102 @@
+.accessibility-menu {
+    position: fixed;
+    top: 0;
+    right: -300px;
+    width: 300px;
+    height: 100vh;
+    background: var(--bg-color);
+    padding: 20px;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+    transition: right 0.3s ease;
+    z-index: 1000;
+}
+
+.accessibility-menu.open {
+    right: 0;
+}
+
+.a11y-option {
+    margin-bottom: 20px;
+}
+
+.a11y-option label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--text-color);
+}
+
+.toggle-button {
+    padding: 8px 16px;
+    border: 2px solid var(--border-color);
+    border-radius: 4px;
+    background: none;
+    cursor: pointer;
+}
+
+.toggle-button.active {
+    background: var(--primary-color);
+    color: white;
+}
+
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    padding: 8px;
+    background: var(--primary-color);
+    color: white;
+    transition: top 0.3s;
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
+/* High contrast theme */
+.high-contrast {
+    --bg-color: #000;
+    --text-color: #fff;
+    --primary-color: #ffff00;
+    --border-color: #fff;
+}
+
+/* Font sizes */
+.font-size-small {
+    font-size: 14px;
+}
+
+.font-size-normal {
+    font-size: 16px;
+}
+
+.font-size-large {
+    font-size: 18px;
+}
+
+.font-size-x-large {
+    font-size: 20px;
+}
+
+/* Screen reader only */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+/* Focus styles */
+*:focus {
+    outline: 3px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
+/* Reduced motion */
+.reduced-motion * {
+    transition: none !important;
+    animation: none !important;
+} 

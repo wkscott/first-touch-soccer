@@ -1,0 +1,54 @@
+:root {
+    /* Colors with proper contrast ratios */
+    --primary-color: #2196F3;
+    --primary-dark: #1976D2;
+    --error-color: #DC3545;
+    --success-color: #28A745;
+    --warning-color: #FFC107;
+    --text-color: #212121;
+    --text-secondary: #424242;
+    --bg-color: #FFFFFF;
+    --bg-secondary: #F5F5F5;
+    --border-color: #BDBDBD;
+
+    /* Focus outline */
+    --focus-outline: 3px solid #2196F3;
+    --focus-outline-offset: 2px;
+
+    /* Transitions */
+    --transition-speed: 0.3s;
+    --transition-timing: ease;
+
+    /* Spacing */
+    --spacing-xs: 4px;
+    --spacing-sm: 8px;
+    --spacing-md: 16px;
+    --spacing-lg: 24px;
+    --spacing-xl: 32px;
+
+    /* Font sizes */
+    --font-size-xs: 12px;
+    --font-size-sm: 14px;
+    --font-size-md: 16px;
+    --font-size-lg: 18px;
+    --font-size-xl: 24px;
+}
+
+/* High contrast theme */
+[data-theme="high-contrast"] {
+    --primary-color: #FFFF00;
+    --primary-dark: #FFD700;
+    --text-color: #FFFFFF;
+    --text-secondary: #FFFFFF;
+    --bg-color: #000000;
+    --bg-secondary: #212121;
+    --border-color: #FFFFFF;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        transition: none !important;
+        animation: none !important;
+    }
+} 
